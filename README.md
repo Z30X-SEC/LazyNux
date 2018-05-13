@@ -10,9 +10,9 @@ This F.M sourcelist PKG tool created by Z30X-SEC
       ============================================================================
        - About:
        * -      This tool created to make your life more eazy and lazy... ;D
-       * -      giving you the Fast Management and control on your own sourelist and.....
+       * -      giving you the Fast Management and control on your own sourcelist and.....
        * -      ..apt\apt-get update\upgrade\install\fix\check\list\more
-       * -      So i BashScripting it for you : NAMED : [[F]ast.[M]anagement sourelist Packets]
+       * -      So i BashScripting it for you : NAMED : [[F]ast.[M]anagement sourcelist Packets]
        * -      See more at https://github.com/Z30X-SEC give some feedbacks...
      =================================================================================
        - Future:
