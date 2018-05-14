@@ -22,4 +22,4 @@ This F.M sourcelist PKG tool created by Z30X-SEC
        - Future:
        * -      Linux Debian\Ubuntu\Kali\Parrot Library packets Archive will add to the menu
      =============================================================================  
-     Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
+       * -      Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
