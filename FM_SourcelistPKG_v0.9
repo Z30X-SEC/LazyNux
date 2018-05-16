@@ -4,7 +4,7 @@ while :
 do
     clear
     cat<<EOF
- ======================================================== 0.9v
+ ======================================================== 1.0v
  _________  ___                                 _ _     _=====    
  |  ___|  \/  |                                | (_)   | |  P  
  | |_  | .  . |  ___  ___  _   _ _ __ ___ ___  | |_ ___| |_ <>
@@ -42,7 +42,7 @@ EOF
     "5")  apt-get install --fix-missing                                                                                                  ;;
     "6")  apt list --upgradable                                                                                                          ;;
     "7")  cat /./etc/apt/sources.list && echo "Press any Key to go back..." && read -n 1                                                 ;;
-    "8")  leafpad /./etc/apt/sources.list                                                                                                  ;;
+    "8")  nano /./etc/apt/sources.list                                                                                                  ;;
     "9")  echo "Type the Source/Packet name you want to install\get" && read varname && apt-get install $varname                         ;;
     "0")  echo "Type the Source/Packet name you want to uninstall" && read varname && apt-get remove $varname                            ;;
     "C")  echo "Type the Source/Packet for checking..." && read varname && apt-get check $varname                                        ;;
