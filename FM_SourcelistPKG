@@ -35,12 +35,12 @@ do
 EOF
     read -n1 -s
     case "$REPLY" in
-    "1")  apt-get update && apt-get upgrade && apt-get install --fix-missing && apt-get full-upgrade                                     ;;
-    "2")  apt-get update                                                                                                                 ;; 
-    "3")  apt-get upgrade                                                                                                                ;;
-    "4")  apt-get full-upgrade                                                                                                           ;;
-    "5")  apt-get install --fix-missing                                                                                                  ;;
-    "6")  apt list --upgradable                                                                                                          ;;
+    "1")  sudo apt-get update && apt-get upgrade && apt-get install --fix-missing && apt-get full-upgrade                                     ;;
+    "2")  sudo apt-get update                                                                                                                 ;; 
+    "3")  sudo apt-get upgrade                                                                                                                ;;
+    "4")  sudo apt-get full-upgrade                                                                                                           ;;
+    "5")  sudo apt-get install --fix-missing                                                                                                  ;;
+    "6")  sudo apt list --upgradable                                                                                                          ;;
     "7")  cat /./etc/apt/sources.list && echo "Press any Key to go back..." && read -n 1                                                 ;;
     "8")  nano /./etc/apt/sources.list                                                                                                  ;;
     "9")  echo "Type the Source/Packet name you want to install\get" && read varname && apt-get install $varname                         ;;
