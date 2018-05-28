@@ -66,4 +66,5 @@ EOF
      * )  echo "invalid option"                                                                                                          ;;
     esac 
     sleep 1
+    clear
 done
