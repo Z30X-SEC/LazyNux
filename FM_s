@@ -1,0 +1,94 @@
+#!/bin/bash
+
+while :
+do
+    clear
+    cat<<EOF
+ ======================================================== 1.1v
+ _________  ___                                 _ _     _=====    
+ |  ___|  \/  |                                | (_)   | |  P  
+ | |_  | .  . |  ___  ___  _   _ _ __ ___ ___  | |_ ___| |_ <>
+ |  _| | |\/| | / __|/ _ \| | | | '__/ __/ _ \ | | / __| __| K
+ | |_  | |  | | \__ \ (_) | |_| | | | (_|  __/ | | \__ \ |_  ><
+ \_(_) \_|  |_/ |___/\___/ \__,_|_|  \___\___| |_|_|___/\__|  G      
+ -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  99 111 112 121 114 103 104 105 116 115  98 121  90 51 48 88  
+ _____________________________________________________________
+                      Copyright by ~Z30X~                       
+  67 111 112 121 114 103 104 105 116  98 121  90 51 48 88 33 
+ ------------------------------------------------------------
+    Please enter your choice:                                                          
+      (1) All In OnePKG                                                                 
+      (2) Update SystemPKG                                                              
+      (3) Upgrade SystemPKG                                                             
+      (4) Full Upgrade SystemPKG                                                        
+      (5) Fix Missing SystemPKG                                                         
+      (6) See Upgradable list (Befor upgrade)                                           
+      (7) View SourceList                                                              
+      (8) Edit Sourcelist                                                              
+      (9) Install Packets                                                               
+      (0) Uninstall Packets                                                             
+    (C)heck - Verify that there are no broken dependencies
+    (F)reashclam ClamAV antivirus + rootkits                            
+    (M)etasploit dbupdate (msf framework requierd)                                     
+    (D) print Metasploit data base list of installed updates (msf framework requierd) 
+    (A)rchive of repsitoreis favor list                                                
+    (I)nfo about ~F.M sourcelist PKG~                                                  
+    (Q)uit                                                                             
+    
+    Enter your choose:
+   ---------------------------------------------------------
+EOF
+    read -n1 -s 
+    case "$REPLY" in
+    "1")  sudo apt-get update && apt-get upgrade && apt-get install --fix-missing && apt-get full-upgrade                                     ;;
+    "2")  sudo apt-get update                                                                                                                 ;; 
+    "3")  sudo apt-get upgrade                                                                                                                ;;
+    "4")  sudo apt-get full-upgrade                                                                                                           ;;
+    "5")  sudo apt-get install --fix-missing                                                                                                  ;;
+    "6")  sudo apt list --upgradable                                                                                                          ;;
+    "7")  cat /./etc/apt/sources.list && echo "Press any Key to go back..." && read -n 1                                                      ;;
+    "8")  nano /./etc/apt/sources.list                                                                                                        ;;
+    "9")  echo "Type the Source/Packet name you want to install\get" && read varname && apt-get install $varname                              ;;
+    "0")  echo "Type the Source/Packet name you want to uninstall" && read varname && apt-get remove $varname                                 ;;
+    "C")  echo "Type the Source/Packet for checking..." && read varname && apt-get check $varname                                             ;;
+    "c")  echo "Type the Source/Packet for checking..." && read varname && apt-get check $varname                                             ;;
+    "F")  freshclam                                                                                                                           ;;
+    "f")  freshclam                                                                                                                           ;;
+    "M")  sudo searchsploit -u                                                                                                                ;;
+    "m")  sudo searchsploit -u                                                                                                                ;;
+    "D")  sudo searchsploit update  && echo "Press any Key to go back..." && read -n 1                                                        ;;
+    "d")  sudo searchsploit update  && "Press any Key to go back..." && read -n 1                                                             ;;
+    "A") '''                                                                                                                                    
+       - INFO: repo URLS list for Add-on your ./etc/apt/source.list
+       --------------------------------------------------------------
+   [*] (Kali repository)    - [https://docs.kali.org/general-use/kali-linux-sources-list-repositories]
+   [*] (Parrot repository)  - [https://archive.parrotsec.org/parrot/README.html]
+   [*] (Debian security)    - [https://www.debian.org/security/]
+   [*] (Debian repository)  - [https://wiki.debian.org/SourcesList]
+   [*] (Ubuntu repository)  - [https://help.ubuntu.com/community/Repositories/CommandLine]
+   [*] (Ubuntu "trusty" re) - [https://packages.ubuntu.com/trusty] 
+        '''
+          echo "Press any Key to go back..." && read -n 1                                                                                     ;;  
+    "I") '''
+  This F.M sourcelist PKG tool created by Z30X-SEC                                                                            
+  --------------------------------------------------                                             
+   - INFO: Support - Debian\Ubuntu Systems
+   [*] -     Support - apt-get\apt Systemas
+   [*] -     Support - root user\user premissonlized
+   [*] -     Support - directory [ /etc/apt/sources.list ]
+  =================================================================================
+   - About: This tool created to make your life more eazy and lazy... ;D
+   [*] -      giving you the Fast Management and control on your own sourcelist and.....
+   [*] -      ..apt\apt-get update\upgrade\install\fix\check\list\more
+   [*] -      So i BashScripting it for you : NAMED : [[F]ast.[M]anagement sourcelist Packets]
+   [*] -      See more at https://github.com/Z30X-SEC give some feedbacks...
+  =================================================================================
+     '''
+          echo "Press any Key to go back..." && read -n 1                                                                                     ;;
+    "Q")  echo "Thanks for using F.M sourcelist PKG" && sleep 2 && clear && exit                                                              ;;
+    "q")  echo "Thanks for using F.M sourcelist PKG" && sleep 2 && clear && exit                                                              ;;
+     * )  echo "invalid option"                                                                                                               ;;
+    esac                                                                                                                                      
+    sleep 1                                                                                                                                   
+done                                                                                                                                          
