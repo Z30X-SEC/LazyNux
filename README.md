@@ -19,7 +19,4 @@ This F.M sourcelist PKG tool created by Z30X-SEC
        * -      So i BashScripting it for you : NAMED : [[F]ast.[M]anagement sourcelist Packets]
        * -      See more at https://github.com/Z30X-SEC give some feedbacks...
      =================================================================================
-       - Future:
-       * -      Linux Debian\Ubuntu\Kali\Parrot Library packets Archive will add to the menu
-     =============================================================================  
        * -      Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
