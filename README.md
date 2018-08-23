@@ -6,8 +6,9 @@ Dont forget to change premissins to excute.
 USE: chmod +x FM_SourcelistPKG_v*.* 
 
 This F.M sourcelist PKG tool created by Z30X-SEC
- --------------------------------------------------                                             
+=================================================
        - INFO:
+       * -     Created for Kali linux unstable and APT linux
        * -     Support - Debian\Ubuntu Systems
        * -     Support - apt-get\apt Systems
        * -     Support - root user\user premissonlized
@@ -19,4 +20,5 @@ This F.M sourcelist PKG tool created by Z30X-SEC
        * -      So i BashScripting it for you : NAMED : [[F]ast.[M]anagement sourcelist Packets]
        * -      See more at https://github.com/Z30X-SEC give some feedbacks...
      =================================================================================
+     This tools created for Kali linux specificliy but it's will works on other APT machines
        * -      Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
