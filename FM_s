@@ -4,84 +4,92 @@ while :
 do
     clear
     cat<<EOF
- ======================================================== V1.3
- _________  ___                                 _ _     _=====    
- |  ___|  \/  |                                | (_)   | |  P  
- | |_  | .  . |  ___  ___  _   _ _ __ ___ ___  | |_ ___| |_ <>
- |  _| | |\/| | / __|/ _ \| | | | '__/ __/ _ \ | | / __| __| K
- | |_  | |  | | \__ \ (_) | |_| | | | (_|  __/ | | \__ \ |_  ><
- \_(_) \_|  |_/ |___/\___/ \__,_|_|  \___\___| |_|_|___/\__|  G      
- -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  Created by ~Z30X~                       
-	 [+] Options:
-	 -------------------
-      (1) All In OnePKG                                                                 
-      (2) Update SystemPKG                                                              
-      (3) Upgrade SystemPKG                                                             
-      (4) Full Upgrade SystemPKG                                                        
-      (5) Fix Missing SystemPKG                                                         
-      (6) See Upgradable list (Befor upgrade)                                           
-      (7) View SourceList                                                              
-      (8) Edit Sourcelist                                                              
-      (9) Install Packets                                                               
-      (0) Uninstall Packets                                                             
-    (C)heck - Verify that there are no broken dependencies
-    (F)reashclam ClamAV antivirus + rootkits                            
-    (M)etasploit dbupdate (*msf framework requierd*)                                     
-    (D) print Metasploit data base list of installed updates (*msf framework requierd*) 
-    (A)rchive of repsitoreis favor list                                                
-    (I)nfo about ~F.M sourcelist PKG~                                                  
-    (Q)uit                                                                             
-    
-    Enter your choose:
-   -------------------
+ |========================================================|[V1.3]
+ | _________  ___                                 _ _     _ ======|
+ | |  ___|  \/  |           -by ~Z30X~           | (_)   | |  P   |
+ | | |_  | .  . |  ___  ___  _   _ _ __ ___ ___  | |_ ___| |_ <>  |
+ | |  _| | |\/| | / __|/ _ \| | | | '__/ __/ _ \ | | / __| __| K  |
+ | | |_  | |  | | \__ \ (_) | |_| | | | (_|  __/ | | \__ \ |_  >< |
+ | \_(_) \_|  |_/ |___/\___/ \__,_|_|  \___\___| |_|_|___/\__|  G |
+ |================================================================|
+    | [+] Options : |
+    |===============|
+    (1) All In OnePKG
+    (2) Update SystemPKG
+    (3) Upgrade SystemPKG
+    (4) Full Upgrade SystemPKG
+    (5) Fix Missing SystemPKG
+    (6) See Upgradable list (Befor upgrade)
+    (7) View SourceList
+    (8) Edit Sourcelist
+    (9) Install Packets
+    (0) Uninstall Packets
+  (C)heck - Verify that there are no broken dependencies
+  (F)reashclam ClamAV antivirus + rootkits
+  (M)etasploit dbupdate (*msf framework requierd*)
+  (D) print Metasploit data base list of installed updates (*msf framework requierd*)
+  (A)rchive of repsitoreis favor list
+  (Q)uit 
+ |=======================|
+ |[+] Enter your choose :|
+ |=======================|
+ 
 EOF
-    read -n1 -s 
-    case "$REPLY" in
-    "1")  sudo apt-get update && apt-get upgrade &&
-		  apt-get install --fix-missing && apt-get full-upgrade 
-		  echo "FINISHD Press any Key to go back..." && read -n 1 				;;
-    "2")  sudo apt-get update                                                                                                                                ;; 
-    "3")  sudo apt-get upgrade                                                                                                                               ;;
-    "4")  sudo apt-get full-upgrade                                                                                                                          ;;
-    "5")  sudo apt-get install --fix-missing                                                                                                                 ;;
-    "6")  sudo apt list --upgradable                                                                                                                         ;;
-    "7")  cat /./etc/apt/sources.list
-		  echo "FINISHD Press any Key to go back..." && read -n 1                            ;;
-    "8")  nano /./etc/apt/sources.list                                                                                                                       ;;
-    "9")  echo "Type the Source/Packet name you want to install\get" 
-		  read varname && apt-get install $varname                                           ;;
-    "0")  echo "Type the Source/Packet name you want to uninstall"
-		  read varname && apt-get remove $varname                                            ;;
-    "C")  echo "Type the Source/Packet for checking..." 
-          read varname && apt-get check $varname                                             ;;
-    "c")  echo "Type the Source/Packet for checking..." 
-		  read varname && apt-get check $varname                                             ;;
-    "F")  freshclam                                                                                                                                          ;;
-    "f")  freshclam                                                                                                                                          ;;
-    "M")  sudo searchsploit -u                                                                                                                               ;;
-    "m")  sudo searchsploit -u                                                                                                                               ;;
-    "D")  sudo searchsploit update 
-		  echo "FINISHD Press any Key to go back..." && read -n 1                            ;;
-    "d")  sudo searchsploit update  && "FINISHD Press any Key to go back..."
-		  read -n 1                                                                          ;;
-    "A") '''
-      [+] INFO: repo URLS list for Add-on your ./etc/apt/source.list
-      --------------------------------------------------------------
-   [*] (Kali repository) 
-	- [https://docs.kali.org/general-use/kali-linux-sources-list-repositories]
-   [*] (Parrot repository) - [https://archive.parrotsec.org/parrot/README.html]
-   [*] (Debian security) - [https://www.debian.org/security/]
-   [*] (Debian repository) - [https://wiki.debian.org/SourcesList]
-   [*] (Ubuntu repository) - [https://help.ubuntu.com/community/Repositories/CommandLine]
-   [*] (Ubuntu "trusty" re) - [https://packages.ubuntu.com/trusty] 
+read -n1 -s
+case "$REPLY" in
+	"1") sudo apt-get update && apt-get upgrade &&
+		apt-get install --fix-missing && apt-get full-upgrade &&
+		apt --fix-broken install
+		echo " [!] FINISHD Press any Key to go back..." && read -n  ;;
+	"2") sudo apt-get update                                            ;;
+	"3") sudo apt-get upgrade                                           ;;
+	"4") sudo apt-get full-upgrade                                      ;;
+	"5") sudo apt-get install --fix-missing                             ;;
+	"6") sudo apt list --upgradable                                     ;;
+	"7") cat /./etc/apt/sources.list
+		echo "FINISHD Press any Key to go back..." && read -n 1     ;;
+	"8") nano /./etc/apt/sources.list                                   ;;
+	"9") echo "Type the Source/Packet name you want to install\get"
+		read varname && apt-get install $varname                    ;;
+	"0") echo "Type the Source/Packet name you want to uninstall"
+		read varname && apt-get remove $varname                     ;;
+	"C") echo "Type the Source/Packet for checking..."
+		read varname && apt-get check $varname                      ;;
+	"c") echo "Type the Source/Packet for checking..."
+		 read varname && apt-get check $varname                     ;;
+	"F") freshclam                                                      ;;
+	"f") freshclam                                                      ;;
+	"M") sudo searchsploit -u                                           ;;
+	"m") sudo searchsploit -u                                           ;;
+	"D") sudo searchsploit update
+		 echo "FINISHD Press any Key to go back..." && read -n 1    ;;
+	"d") sudo searchsploit update  &&
+		"FINISHD Press any Key to go back..." read -n 1             ;;
+	"A") '''
+	[+] INFO: repo URLS list for Add-on your ./etc/apt/source.list
+	=========================================================
+ [*] (Kali repository)
+   +URL >>> 
+   [https://docs.kali.org/general-use/kali-linux-sources-list-repositories]
+ [*] (Parrot repository)
+   +URL >>> 
+   [https://archive.parrotsec.org/parrot/README.html]
+ [*] (Debian security)
+   +URL >>> 
+   [https://www.debian.org/security/]
+ [*] (Debian repository)
+   +URL > [https://wiki.debian.org/SourcesList]
+ [*] (Ubuntu repository)
+  +URL > [https://help.ubuntu.com/community/Repositories/CommandLine]
+ [*] (Ubuntu trusty re)
+  +URL > [https://packages.ubuntu.com/trusty]
 	'''
-	     echo "Press any Key to go back..." && read -n 1                                                                                                       ;;
-    "Q") echo "Thanks for using F.M sourcelist PKG" 
-		 sleep 2 && clear && exit                                                           ;;
-    "q") echo "Thanks for using F.M sourcelist PKG"
-		 sleep 2 && clear && exit                                                           ;;
-     * ) echo "invalid option"                                                                                                                             ;;
-    esac                                                                                                                                      
-    sleep 1                                                                                                                                   
-done                                                                                                                                          
+echo "Press any Key to go back..." && read -n 1                          ;;
+	"Q") echo "Thanks for using F.M sourcelist PKG"
+		sleep 2 && clear && exit                                 ;;
+	"q") echo "Thanks for using F.M sourcelist PKG"
+		sleep 2 && clear && exit                                 ;;
+	* )  echo "invalid option"                                       ;;
+    esac
+    sleep 1
+done
