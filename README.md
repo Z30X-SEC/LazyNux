@@ -1,5 +1,5 @@
 # LazyNux
-LazyNux-made for any lazy Linux user, Shorting time and Improves performance
+Tool - made for any lazy Linux user, Shorting time and Improves performance
 ============================================================================
      - about:
        * - Fast Management and eazy control on your own sourceslist
