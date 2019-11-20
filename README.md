@@ -1,24 +1,30 @@
-# FM_SourcelistPKG
-[FM_Sourcelist-PKG] Simple MENU tool for managment Sourcelist and APT/APT-GET packets.
+# LazyNux
+[LazyNux] Simple MENU tool for managment the sourceslist and more system things todo options.
 
-Dont forget to change premissins to excute.
+How to install: (script kiddies only!) 
+TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
+TERMINAL: [ cd /LazyNux ]
+TERMINAL: [ sudo chmod +x L ]
+TERMINAL: [ sudo sh L ]
 
-USE: chmod +x FM_SourcelistPKG_v*.* 
+LazyNux made for any lazy Linux user, and shorting yout time
+============================================================
+       - information:
+       * - Support - Debian, Ubuntu, Kali-linux (apt-get) Systems
+       * - Support - all user\user premissonlized or make sure to run on sudo
+      =======================================================================
+       - about:
+       * - Fast Management and eazy control on your own sourceslist
+       * - More system options to take more effctive of the system
+       * - Anonymously and Browsing futures options to use
+       * - Network and Security system AV, FW, HP and more
+     =========================================================================
+       - bio:
+       * - This tool created long time ago for Kali linux specificliy but, I programming
+       * - It for any Debian, so its will works on other apt-get kernel machines 
+       * - Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
 
-This F.M sourcelist PKG tool created by Z30X-SEC
-=================================================
-       - INFO:
-       * -     Created for Kali linux unstable and APT linux
-       * -     Support - Debian\Ubuntu Systems
-       * -     Support - apt-get\apt Systems
-       * -     Support - root user\user premissonlized
-      ============================================================================
-       - About:
-       * -      This tool created to make your life more eazy and lazy... ;D
-       * -      giving you the Fast Management and control on your own sourcelist and.....
-       * -      ..apt\apt-get update\upgrade\install\fix\check\list\more
-       * -      So i BashScripting it for you : NAMED : [[F]ast.[M]anagement sourcelist Packets]
-       * -      See more at https://github.com/Z30X-SEC give some feedbacks...
-     =================================================================================
-     This tools created for Kali linux specificliy but it's will works on other APT machines
-       * -      Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
+
+* - See more at https://github.com/Z30X-SEC Thanks for trying LazyNux
+
+[!] This tool is not official yet and get updating sometimes...
