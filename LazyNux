@@ -17,6 +17,7 @@ clc=$(tput setaf 6) #C
 clw=$(tput setaf 7) #W
 cln=$(tput sgr 0)   #N
 
+
 clear && echo """$clg
  ██╗      █████╗ ███████╗██╗   ██╗███╗   ██╗██╗   ██╗██╗  ██╗
  ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝████╗  ██║██║   ██║╚██╗██╔╝
@@ -26,6 +27,21 @@ clear && echo """$clg
  ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝$clb [v 1.7]$clg"""
 echo "$clr tool for lazy Humanity, Control the system at the touch of a button ~$clg"
 sleep 2.5 && clear
+
+FILE=/sbin/L
+if [ -f "$FILE" ]; then
+    echo "$csc Starting, LazyNux..."
+else 
+    echo "$csc LazyNux, does not exist"
+	while true; do
+    read -p "$csc Do you wish to install this program? Yes/No" yn
+    case $yn in
+        [Yy]* ) cp L -r > /sbin/ && echo "Press L into the terminal, for run LazyNux tool.";;
+        [Nn]* ) exit;;
+    esac
+done
+fi
+
 while :
 do
     clear
