@@ -1,0 +1,147 @@
+#!/bin/bash
+#color scheme options +
+csr=$(tput setaf 1)[!]$(tput sgr 0) #R
+csg=$(tput setaf 2)[+]$(tput sgr 0) #G
+csy=$(tput setaf 3)[?]$(tput sgr 0) #Y
+csb=$(tput setaf 4)[@]$(tput sgr 0) #B
+csp=$(tput setaf 5)[-]$(tput sgr 0) #P
+csc=$(tput setaf 6)[*]$(tput sgr 0) #C
+csw=$(tput setaf 7)[*]$(tput sgr 0) #W
+clB=$(tput setaf 0) #B
+clr=$(tput setaf 1) #R
+clg=$(tput setaf 2) #G
+clb=$(tput setaf 4) #B
+cly=$(tput setaf 3) #Y
+clp=$(tput setaf 5) #P
+clc=$(tput setaf 6) #C
+clw=$(tput setaf 7) #W
+cln=$(tput sgr 0)   #N
+
+clear && echo """$clg
+ ██╗      █████╗ ███████╗██╗   ██╗███╗   ██╗██╗   ██╗██╗  ██╗
+ ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝████╗  ██║██║   ██║╚██╗██╔╝
+ ██║     ███████║  ███╔╝  ╚████╔╝ ██╔██╗ ██║██║   ██║ ╚███╔╝
+ ██║     ██╔══██║ ███╔╝    ╚██╔╝  ██║╚██╗██║██║   ██║ ██╔██╗
+ ███████╗██║  ██║███████╗   ██║   ██║ ╚████║╚██████╔╝██╔╝ ██╗
+ ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝$clb [v 1.7]$clg"""
+echo "$clr tool for lazy Humanity, Control the system at the touch of a button ~$clg"
+sleep 2.5 && clear
+while :
+do
+    clear
+    cat<<EOF
+$clc  _    ____ ___  _   _ _  _ _  _ _  _
+  |    |__|   /   \_/  |\ | |  |  \/
+  |___ |  |  /__   |   | \| |__| _/\_
+$clr  ===================================$cln
+$clg    1$cln) Basic Mode-UAU	       $clb[v1.7]$cln
+$clg    2$cln) System maintenance
+$clg    3$cln) Upgrade SystemPKG
+$clg    4$cln) Full Upgrade SystemPKG
+$clg    5$cln) Fix Missing SystemPKG
+$clg    6$cln) See Upgradable list (Befor upgrade)
+$clg    7$cln) View SourceList
+$clg    8$cln) Edit Sourcelist
+$clg    9$cln) Install Packets
+$clg    0$cln) Uninstall Packets
+$clp  S$cln)poofing changing your MAC address
+$clr  Q$cln)uit
+EOF
+read -p " $clc select option: " -n1 -s
+case "$REPLY" in
+	"1") clear && echo """$clr ++++++++++++++++++++++++++++++++++++++++++++++++++$cln
+  Turn on BASIC Mode system Updateing & Upgrading
+$clr ++++++++++++++++++++++++++++++++++++++++++++++++++$cln"""
+		echo "$csg Last update request log was: $clb" && echo "$clg-OLD-------------------------\\$clb"
+		cat /opt/LazyNux/logs/last_apt_dateupdate.txt && echo "$clg------------------------OLD--/$cln"
+		date -u > /opt/LazyNux/logs/last_apt_dateupdate.txt && echo "$csc Checking for Repository updates..." && sleep 1
+		sudo apt-get update && echo "$csg Updating proccess Finished..." && sleep 1
+		echo "$csg New update log saved: $clb" && echo "$clg-NEW-------------------------\\$clb" && cat /opt/LazyNux/logs/last_apt_dateupdate.txt
+		echo "$clg------------------------NEW--/$cln" &&  echo "$csr Check if there is unused packages that already installing/upgrading on the system."
+		sleep 1 && sudo apt-get autoremove && echo "$csg AUTO REMOVE unused packages, Done..." && sleep 1
+		echo "$csc List of Downloaded packages ready to unpacking proccess. $cln"
+		sleep 1 && sudo apt list --upgradable && echo "$clr ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^
+ All the Package names needs to Upgrade/Installing on the system
+ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^$cln"
+		echo "$csc Unpacking packages installing/upgrading the system..." && sleep 1 && sudo apt -y full-upgrade
+		echo "$csg System package installed/upgraded, Done..."
+		echo "$csr Checking the upgradable list, for unsucessful package installing/upgrading."
+		sudo apt list --upgradable && echo """$clr ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ 
+ [!] IF THERE IS ANY PACKGAE NAME CHECK IT MANUAL[!]
+ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ $clp"""
+echo "Clean the apt cache " && sleep 2 ;;
+	"2") clear && echo """$clb 
+ ╔═╗┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┬┌┐┌┌─┐┌─┐┬─┐┌┬┐┌─┐┌┬┐┬┌─┐┌┐┌
+ ╚═╗└┬┘└─┐ │ ├┤ │││  ││││├┤ │ │├┬┘│││├─┤ │ ││ ││││
+ ╚═╝ ┴ └─┘ ┴ └─┘┴ ┴  ┴┘└┘└  └─┘┴└─┴ ┴┴ ┴ ┴ ┴└─┘┘└┘ $cln"""
+	   OPTIONS="System-Information AdminTools Repsitoreis-Archive Full_Upgrade_SystemPKG Back"
+       select opt in $OPTIONS; do
+			if [ "$opt" = "Back" ]; then
+				break         
+			elif [ "$opt" = "System-Information" ]; then            
+				apt-get update
+			elif [ "$opt" = "AdminTools" ]; then
+				apt-get update
+            elif [ "$opt" = "Repsitoreis-Archive" ] ; then            
+				clear && echo """$clr ~~~~~~~~~~~~~~~~~~~~~~~~~~~$cln
+ Great Place to Update from:
+$clr ~~~~~~~~~~~~~~~~~~~~~~~~~~~$cln
+ $csc$clr INFO: repo URLS list for Add-on your ./etc/apt/source.list $cln
+     =======================================================================
+ $csc (Kali repository):
+   +URL >>>""" echo "$clr [https://docs.kali.org/general-use/kali-linux-sources-list-repositories] $cln"
+echo """ $csc (Parrot repository):
+   +URL >>>$clg [https://archive.parrotsec.org/parrot/README.html] $cln"""
+echo """ $csc (Debian security):
+   +URL >>>$clg [https://www.debian.org/security/] $cln"""
+echo """ $csc (Debian repository):
+   +URL >>>$clg [https://wiki.debian.org/SourcesList] $cln"""
+echo """ $csc (Ubuntu repository):
+   +URL >>>$clg [https://help.ubuntu.com/community/Repositories/CommandLine] $cln"""
+echo """ $csc (Ubuntu trusty re):
+   +URL >>>$clg [https://packages.ubuntu.com/trusty] $cln"""
+echo """ ===========================
+ Press any Key to go back...
+ ===========================""" && read -n 1
+            else
+				echo "try again..." && sleep 1.5 && clear && echo """$clb 
+ ╔═╗┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┬┌┐┌┌─┐┌─┐┬─┐┌┬┐┌─┐┌┬┐┬┌─┐┌┐┌
+ ╚═╗└┬┘└─┐ │ ├┤ │││  ││││├┤ │ │├┬┘│││├─┤ │ ││ ││││
+ ╚═╝ ┴ └─┘ ┴ └─┘┴ ┴  ┴┘└┘└  └─┘┴└─┴ ┴┴ ┴ ┴ ┴└─┘┘└┘ $cln"""
+			fi
+		done ;;
+	"3") echo "hello" ;;
+	"4") echo "gay" ;;
+	"5") echo "gay" ;;
+	"6") echo "gay" ;;
+	"7") clear && echo """     ----------------------
+ [$] My SYSTEM sources list
+     ----------------------""" && read -n 1
+         cat /./etc/apt/sources.list ;;
+	"8") apt edit-sources ;;
+	"9") echo "Type the Source/Packet name you want to install\get"
+		read varname && apt-get install $varname ;;
+	"0") echo "Type the Source/Packet name you want to uninstall"
+		read varname && apt-get remove $varname ;;
+	"S") clear && echo "$(tput setaf 1)Avinables Interfaces$(tput sgr 0)"
+		ls /sys/class/net
+		echo "$(tput setaf 1)Enter the Interface to change [+] RANDOM [+]$(tput sgr 0)"
+		read varname && sudo macchanger --random  $varname
+		echo "Your new Interface MAC : select |==>>$clg $varname(tput sgr 0)"
+		echo "Press any Key to go back..." && read -n 1 ;;
+	"Q") clear && echo """$clb  _      ____ _____ __  __ __  _  __ __ __  __
+ | |__  / () \` / /_\ \/ /|  \| ||  |  |\ \/ /
+ |____|/__/\__\/___/ |__| |_|\__| \___/ /_/\_\ 
+ ============================================= $clg
+  # Thanks for using LN tool, made by Z30X-S3C$clr #~ $cln"""
+		sleep 2 && clear && exit ;;
+	"q") clear && echo """$clb  _      ____ _____ __  __ __  _  __ __ __  __
+ | |__  / () \` / /_\ \/ /|  \| ||  |  |\ \/ /
+ |____|/__/\__\/___/ |__| |_|\__| \___/ /_/\_\ 
+ ============================================= $clg
+  # Thanks for using LN tool, made by Z30X-S3C $cln"""
+		sleep 2 && clear && exit ;;
+	* )  echo "$csr invalid option" ;;
+    esac
+    sleep 1
+done
