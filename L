@@ -24,23 +24,23 @@ clear && echo """$clg
  ██║     ███████║  ███╔╝  ╚████╔╝ ██╔██╗ ██║██║   ██║ ╚███╔╝
  ██║     ██╔══██║ ███╔╝    ╚██╔╝  ██║╚██╗██║██║   ██║ ██╔██╗
  ███████╗██║  ██║███████╗   ██║   ██║ ╚████║╚██████╔╝██╔╝ ██╗
- ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝$clb [v 1.7]$clg"""
-echo "$clr tool for lazy Humanity, Control the system at the touch of a button ~$clg"
-sleep 2.5 && clear
-
+ ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝$clb [v 1.8] $clg"""
+echo "$csr$clr for lazy Humanity, Control the system at the touch of a button ~ $clg"
 FILE=/sbin/L
 if [ -f "$FILE" ]; then
-    echo "$csc Starting, LazyNux..."
+	echo "$csg Starting, LazyNux..."
 else 
-    echo "$csc LazyNux, does not exist"
-	while true; do
-    read -p "$csc Do you wish to install this program? Yes/No" yn
-    case $yn in
-        [Yy]* ) cp L -r > /sbin/ && echo "Press L into the terminal, for run LazyNux tool.";;
-        [Nn]* ) exit;;
-    esac
-done
+    echo "$csr ATTENTRION: LazyNux tool, does not exist at the directory:$clg /sbin $cln"
+		while true; do
+			read -p "$csg Do you wish to install LazyNux?, Type Y/n: " yn
+			case $yn in
+				[Yy]* ) cp L -r /sbin && echo "$csc Copy LazyNux to:$clp |==> /sbin $cln" ;break;;
+				[Nn]* ) exit;;
+				* ) echo "$csc Select: yes or no.";;
+			esac
+		done && echo "$csr PRESS L to start$clg LazyNux... $cln"
 fi
+sleep 2.5 && clear
 
 while :
 do
@@ -127,9 +127,9 @@ echo """ ===========================
 			fi
 		done ;;
 	"3") echo "hello" ;;
-	"4") echo "gay" ;;
-	"5") echo "gay" ;;
-	"6") echo "gay" ;;
+	"4") echo "test1" ;;
+	"5") echo "test2" ;;
+	"6") echo "test3" ;;
 	"7") clear && echo """     ----------------------
  [$] My SYSTEM sources list
      ----------------------""" && read -n 1
@@ -149,13 +149,13 @@ echo """ ===========================
  | |__  / () \` / /_\ \/ /|  \| ||  |  |\ \/ /
  |____|/__/\__\/___/ |__| |_|\__| \___/ /_/\_\ 
  ============================================= $clg
-  # Thanks for using LN tool, made by Z30X-S3C$clr #~ $cln"""
+  # Thanks for using LazyNux, made by Z30X-S3C$clr #~ $cln"""
 		sleep 2 && clear && exit ;;
 	"q") clear && echo """$clb  _      ____ _____ __  __ __  _  __ __ __  __
  | |__  / () \` / /_\ \/ /|  \| ||  |  |\ \/ /
  |____|/__/\__\/___/ |__| |_|\__| \___/ /_/\_\ 
  ============================================= $clg
-  # Thanks for using LN tool, made by Z30X-S3C $cln"""
+  # Thanks for using LazyNux, made by Z30X-S3C $cln"""
 		sleep 2 && clear && exit ;;
 	* )  echo "$csr invalid option" ;;
     esac
