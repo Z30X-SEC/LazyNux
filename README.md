@@ -1,8 +1,8 @@
 # LazyNux
-Tool - made for any lazy Linux user, Shorting time and Improves performance
-============================================================================
-[!] This tool is not official yet and get updating sometimes...
-
+Tool - made for any lazy Linux user, Shorting time and Improves system performance
+==================================================================================
+[!] NOTE: This tool is not official yet and get updating sometimes...
+     ===============================================================
      - about:
        * - Fast Management and eazy control on your own sourceslist
        * - More system options to take more effctive of the system
