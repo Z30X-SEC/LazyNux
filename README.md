@@ -1,6 +1,6 @@
 # LazyNux
-LazyNux made for any lazy Linux user, and shorting your time typing 
-===================================================================
+LazyNux-made for any lazy Linux user, Shorting time and Improves performance
+============================================================================
      - about:
        * - Fast Management and eazy control on your own sourceslist
        * - More system options to take more effctive of the system
@@ -17,7 +17,7 @@ LazyNux made for any lazy Linux user, and shorting your time typing
            but, I programming it for any Debian, so its will works
            on other (apt-get) linux kernel operation systems.
        * - If you have any idea to add something usful Contact me
-       * - See more at https://github.com/Z30X-SEC Thanks for trying LazyNux
+       * - See more at https://github.com/Z30X-SEC 
 
 [!] This tool is not official yet and get updating sometimes...
 
