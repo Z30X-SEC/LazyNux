@@ -4,6 +4,7 @@ Tool - made for any lazy Linux user, Shorting time and Improves system performan
 [!] NOTE: This tool is not official yet and get updating sometimes...
 
      [+] about:
+       * - Installing directory (/sbin & /bin)
        * - Fast Management and eazy control on your own sourceslist
        * - More system options to take more effctive of the system
        * - Anonymously and Browsing futures options to use
@@ -21,10 +22,11 @@ Tool - made for any lazy Linux user, Shorting time and Improves system performan
        * - If you have any idea to add something usful Contact me
        * - See more at https://github.com/Z30X-SEC 
      ---------------------------------------------------------------
-      Installtion - type in terminal
-      * - How to install: (script kiddies only!) 
+Installtion guide:
+
+      * - how to install: (script kiddies only!) 
           make sure you run with sudo.
-        1 command: [ git clone https://github.com/Z30X-SEC/LazyNux.git]
-        2 command: [ cd /LazyNux ]
-        3 command: [ chmod +x L ]
-        4 command: [ ./L ]
+        1) command: [ git clone https://github.com/Z30X-SEC/LazyNux.git]
+        2) command: [ cd LazyNux ]
+        3) command: [ chmod +x L ]
+        4) command: [ ./L ]
