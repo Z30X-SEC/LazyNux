@@ -1,11 +1,11 @@
 # LazyNux
 [LazyNux] Simple MENU tool for managment the sourceslist and more system things todo options.
 
-How to install: (script kiddies only!) 
-TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
-TERMINAL: [ cd /LazyNux ]
-TERMINAL: [ sudo chmod +x L ]
-TERMINAL: [ sudo sh L ]
+       - How to install: (script kiddies only!) 
+       TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
+       TERMINAL: [ cd /LazyNux ]
+       TERMINAL: [ sudo chmod +x L ]
+       TERMINAL: [ sudo sh L ]
 
 LazyNux made for any lazy Linux user, and shorting yout time
 ============================================================
@@ -23,8 +23,6 @@ LazyNux made for any lazy Linux user, and shorting yout time
        * - This tool created long time ago for Kali linux specificliy but, I programming
        * - It for any Debian, so its will works on other apt-get kernel machines 
        * - Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
-
-
-* - See more at https://github.com/Z30X-SEC Thanks for trying LazyNux
+       * - See more at https://github.com/Z30X-SEC Thanks for trying LazyNux
 
 [!] This tool is not official yet and get updating sometimes...
