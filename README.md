@@ -1,11 +1,11 @@
 # LazyNux
 [LazyNux] Simple MENU tool for managment the sourceslist and more system things todo options.
 
-       - How to install: (script kiddies only!) 
-       TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
-       TERMINAL: [ cd /LazyNux ]
-       TERMINAL: [ sudo chmod +x L ]
-       TERMINAL: [ sudo sh L ]
+       * - How to install: (script kiddies only!) 
+           TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
+           TERMINAL: [ cd /LazyNux ]
+           TERMINAL: [ sudo chmod +x L ]
+           TERMINAL: [ sudo sh L ]
 
 LazyNux made for any lazy Linux user, and shorting yout time
 ============================================================
@@ -26,3 +26,10 @@ LazyNux made for any lazy Linux user, and shorting yout time
        * - See more at https://github.com/Z30X-SEC Thanks for trying LazyNux
 
 [!] This tool is not official yet and get updating sometimes...
+
+Installtion
+       * - How to install: (script kiddies only!) 
+           TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
+           TERMINAL: [ cd /LazyNux ]
+           TERMINAL: [ sudo chmod +x L ]
+           TERMINAL: [ sudo sh L ]
