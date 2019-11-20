@@ -21,12 +21,13 @@ Tool - made for any lazy Linux user, Shorting time and Improves system performan
            on other (apt-get) linux kernel operation systems.
        * - If you have any idea to add something usful Contact me
        * - See more at https://github.com/Z30X-SEC 
-     ---------------------------------------------------------------
+     
 Installtion guide:
 
       * - How to install: (script kiddies only!) 
-          make sure you run with sudo.
-        1) command: [ git clone https://github.com/Z30X-SEC/LazyNux.git]
+          make sure you have alredy installed "git". [ command: git clone ]
+          if Not, Type: [ apt-get install git ]
+        1) command: [ git clone https://github.com/Z30X-SEC/LazyNux.git ]
         2) command: [ cd LazyNux ]
         3) command: [ chmod +x L ]
         4) command: [ ./L ]
