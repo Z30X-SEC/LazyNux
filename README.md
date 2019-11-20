@@ -1,35 +1,29 @@
 # LazyNux
-[LazyNux] Simple MENU tool for managment the sourceslist and more system things todo options.
-
-       * - How to install: (script kiddies only!) 
-           TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
-           TERMINAL: [ cd /LazyNux ]
-           TERMINAL: [ sudo chmod +x L ]
-           TERMINAL: [ sudo sh L ]
-
-LazyNux made for any lazy Linux user, and shorting yout time
-============================================================
-       - information:
-       * - Support - Debian, Ubuntu, Kali-linux (apt-get) Systems
-       * - Support - all user\user premissonlized or make sure to run on sudo
-      =======================================================================
-       - about:
+LazyNux made for any lazy Linux user, and shorting your time typing 
+===================================================================
+     - about:
        * - Fast Management and eazy control on your own sourceslist
        * - More system options to take more effctive of the system
        * - Anonymously and Browsing futures options to use
        * - Network and Security system AV, FW, HP and more
-     =========================================================================
-       - bio:
-       * - This tool created long time ago for Kali linux specificliy but, I programming
-       * - It for any Debian, so its will works on other apt-get kernel machines 
-       * - Thanks for using my [FM_Sourcelist-PKG] tool, have a nice day.
+     ==============================================================
+     - information:
+       * - Support - Debian, Ubuntu, Kali-linux (apt-get) Systems
+       * - Support - all user\user premissonlized or run on sudo
+       * - SOON Support - Arch-Linux operation systems (pacman)
+     ==============================================================
+     - bio:
+       * - This tool created long time ago for Kali linux specificliy
+           but, I programming it for any Debian, so its will works
+           on other (apt-get) linux kernel operation systems.
+       * - If you have any idea to add something usful Contact me
        * - See more at https://github.com/Z30X-SEC Thanks for trying LazyNux
 
 [!] This tool is not official yet and get updating sometimes...
 
-Installtion
-       * - How to install: (script kiddies only!) 
-           TERMINAL: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
-           TERMINAL: [ cd /LazyNux ]
-           TERMINAL: [ sudo chmod +x L ]
-           TERMINAL: [ sudo sh L ]
+      Installtion - type in terminal
+      * - How to install: (script kiddies only!) 
+      command: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
+      command: [ cd /LazyNux ]
+      command: [ sudo chmod +x L ]
+      command: [ sudo sh L ]
