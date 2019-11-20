@@ -26,15 +26,15 @@ clear && echo """$clg
  ███████╗██║  ██║███████╗   ██║   ██║ ╚████║╚██████╔╝██╔╝ ██╗
  ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝$clb [v 1.8] $clg"""
 echo "$csr$clr for lazy Humanity, Control the system at the touch of a button ~ $clg"
-FILE=/sbin/L
+FILE=/bin/L
 if [ -f "$FILE" ]; then
 	echo "$csg Starting, LazyNux..."
 else 
-    echo "$csr ATTENTRION: LazyNux tool, does not exist at the directory:$clg /sbin $cln"
+    echo "$csr ATTENTRION: LazyNux tool, does not exist at the directory:$clg /sbin & /bin $cln"
 		while true; do
 			read -p "$csg Do you wish to install LazyNux?, Type Y/n: " yn
 			case $yn in
-				[Yy]* ) cp L -r /sbin && echo "$csc Copy LazyNux to:$clp |==> /sbin $cln" ;break;;
+				[Yy]* ) sudo cp L -R /bin && sudo cp L -R /sbin &&echo "$csc Copy LazyNux to:$clp |==> /sbin & /bin $cln" ;break;;
 				[Nn]* ) exit;;
 				* ) echo "$csc Select: yes or no.";;
 			esac
