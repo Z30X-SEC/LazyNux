@@ -23,7 +23,8 @@ Tool - made for any lazy Linux user, Shorting time and Improves system performan
      ---------------------------------------------------------------
       Installtion - type in terminal
       * - How to install: (script kiddies only!) 
-        1 command: [ sudo git clone https://github.com/Z30X-SEC/LazyNux.git ]
+          make sure you run with sudo.
+        1 command: [ git clone https://github.com/Z30X-SEC/LazyNux.git]
         2 command: [ cd /LazyNux ]
-        3 command: [ sudo chmod +x L ]
-        4 command: [ sudo sh L ]
+        3 command: [ chmod +x L ]
+        4 command: [ ./L ]
